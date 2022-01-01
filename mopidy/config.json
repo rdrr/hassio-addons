@@ -1,0 +1,47 @@
+{
+  "name": "Mopidy",
+  "version": "2.0.1",
+  "slug": "mopidy",
+  "panel_icon": "mdi:music-circle",
+  "description": "Mopidy Music Server",
+  "webui": "http://[HOST]:[PORT:6680]/iris",
+  "ingress": false,
+  "ingress_port": 6680,
+  "ingress_entry": "iris/",
+  "arch": [
+    "armv7",
+    "armhf",
+    "amd64",
+    "i386",
+    "aarch64"
+  ],
+  "homeassistant": "0.115.0",
+  "startup": "system",
+  "boot": "auto",
+  "audio": true,
+  "devices": ["/dev/snd"],
+  "map": ["share:rw", "media:rw"],
+  "ports": {
+    "6680/tcp": 6680,
+    "6600/tcp": 6600
+  },
+  "ports_description": {
+    "6680/tcp": "Web Frontend",
+    "6600/tcp": "MDP Connection"
+  },
+  "options": {
+    "media_folder": "/media/mopidy/media",
+    "playlist_folder": "/media/mopidy/playlists",
+    "locale": "en_US",
+    "country": "en"
+  },
+  "schema": {
+    "media_folder": "match(/share/.+|/media/.+|(smb|nfs)://.+)",
+    "playlist_folder": "match(/share/.+|/media/.+|(smb|nfs)://.+)",
+    "custom_config": "match(/share/mopidy/.+)?",
+    "locale": "match([a-z]{2}_[A-Z{2}])",
+    "country": "match([a-z]{2})"
+  }
+}
+
+
