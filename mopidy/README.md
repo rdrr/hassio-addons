@@ -16,7 +16,9 @@ It contains following extensions:
 
 * [Mopidy-Iris](https://github.com/jaedb/iris)
 * [Mopidy-MPD](https://github.com/mopidy/mopidy-mpd)
-* [Mopidy-RadioNet](https://github.com/plintx/mopidy-radionet)
+* [Mopidy-SomaFM]
+* [Mopidy-dLenya]
+* [Mopidy-muse]
 
 
 [aarch64-badge]: https://img.shields.io/badge/aarch64-no-red.svg?style=for-the-badge
